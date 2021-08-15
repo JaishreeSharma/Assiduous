@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reminder2">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/head"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SET MEDICINE REMINDER"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Not able to remind your medicines on time? Don't worry!! Just Press the button and say your medicine name. Easy way to set reminders.. Set date and time and Done!!"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="200dp"
+        android:layout_marginTop="200dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="537dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+        <Button
+            android:id="@+id/btn_add_med"
+            android:layout_width="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:text="Add Medicine"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutend"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@drawable/head2"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

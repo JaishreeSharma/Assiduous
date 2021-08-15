@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="com.android.hardware.camera" />
+    <uses-feature android:name="com.android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconfinal"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Yoga6"></activity>
+        <activity android:name=".Yoga5" />
+        <activity android:name=".Yoga4" />
+        <activity android:name=".Yoga3" />
+        <activity android:name=".Yoga1" />
+        <activity android:name=".Yoga2" />
+        <activity android:name=".Yoga" />
+        <activity android:name=".Workout5" />
+        <activity android:name=".Workout4" />
+        <activity android:name=".Workout3" />
+        <activity android:name=".Workout2" />
+        <activity android:name=".Workout1" />
+        <activity android:name=".Workout" />
+        <activity android:name=".Tips3" />
+        <activity android:name=".Tips2" />
+        <activity android:name=".Tips1" />
+        <activity android:name=".Tips" />
+        <activity android:name=".StartWorkout" />
+        <activity android:name=".Options" />
+        <activity android:name=".Food3" />
+        <activity android:name=".Food2" />
+        <activity android:name=".Food1" />
+        <activity android:name=".Food" />
+        <activity android:name=".Excercise" />
+        <activity android:name=".NotificationMessage" />
+        <activity android:name=".AddMedActivity" />
+        <activity android:name=".Reminder2" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".ViewListContents" />
+        <activity android:name=".Emergency" />
+        <activity android:name=".Profile" />
+        <activity
+            android:name=".CaptureAct"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".Scan1" />
+        <activity android:name=".Login2" />
+        <activity android:name=".Dashboard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Register" />
+        <activity android:name=".MainActivity" />
+
+        <receiver
+            android:name=".BootUpReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmBrodcast" />
+    </application>
+
+</manifest>
